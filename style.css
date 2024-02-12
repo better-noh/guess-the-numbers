@@ -1,0 +1,116 @@
+/* @import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700); */
+
+body {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(image/circles.png);
+  font-family: 'Gamja Flower', sans-serif;
+}
+
+.container {
+  box-shadow: 0 0 20px 0 gray;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgba(247, 243, 242, 0.7);
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 110px;
+}
+
+/* 텍스트 슬라이딩 */
+.animated-title {
+  font-size: 5vw;
+  font-family: 'Gamja Flower', sans-serif;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 100px 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.animated-title .track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 30s linear infinite;
+}
+
+.content {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  -webkit-transition: -webkit-transform var(--d) var(--e);
+  transition: -webkit-transform var(--d) var(--e);
+  transition: transform var(--d) var(--e);
+  transition: transform var(--d) var(--e), -webkit-transform var(--d) var(--e);
+  z-index: 1;
+  font-size: 5vw;
+  font-weight: bold;
+  color: blue;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (hover: hover) and (min-width: 700px) {
+  .animated-title .content {
+    -webkit-transform: translateY(calc(100% - 8rem));
+    transform: translateY(calc(100% - 8rem));
+  }
+}
+
+
+.main-img {
+  width: 20vw;
+  height: 20vh;
+}
+
+p {
+  padding: 5px;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+#user-input {
+    width: 50%;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+}
+
+button {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
