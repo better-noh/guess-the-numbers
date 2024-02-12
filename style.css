@@ -27,7 +27,7 @@ body {
 
 /* 텍스트 슬라이딩 */
 .animated-title {
-  font-size: 5vw;
+  font-size: 4vw;
   font-family: 'Gamja Flower', sans-serif;
   font-weight: bold;
   position: relative;
@@ -62,7 +62,7 @@ body {
   transition: transform var(--d) var(--e);
   transition: transform var(--d) var(--e), -webkit-transform var(--d) var(--e);
   z-index: 1;
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: bold;
   color: blue;
 }
